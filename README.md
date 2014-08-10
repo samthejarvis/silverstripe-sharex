@@ -9,6 +9,4 @@ Required ShareX Settings
 
 You'll need to set up a custom destination in ShareX.
 
-[[]]
-
 ![ShareX Settings](/docs/sharex-settings.png)
