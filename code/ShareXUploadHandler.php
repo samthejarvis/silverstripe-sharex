@@ -13,7 +13,6 @@ class ShareXUploadHandler extends Controller {
 
 				return $file->getAbsoluteURL();
 			}
-
 		} else {
 			return $this->httpError(403, 'Oi.');
 		}
