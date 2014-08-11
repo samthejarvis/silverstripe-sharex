@@ -1,0 +1,7 @@
+---
+name: ShareX Configuration
+---
+
+Director:
+  rules:
+    '~': 'ShareXController'

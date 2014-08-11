@@ -7,11 +7,11 @@ class ShareXUploadHandler extends Controller {
 
 			if(isset($_FILES['file'])) {
 				$upload = new Upload();
-				$upload->load($_FILES['file'], 'sharex');
+				$file = new ShareXFile();
 
-				$file = $upload->getFile();
+				$upload->loadIntoFile($_FILES['file'], $file, 'sharex');
 
-				return $file->getAbsoluteURL();
+				return Director::absoluteBaseURL().$file->Link();
 			}
 		} else {
 			return $this->httpError(403, 'Oi.');
