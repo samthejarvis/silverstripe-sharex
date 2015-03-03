@@ -2,8 +2,13 @@
 
 class ShareXController extends Controller {
 
+	static $allowed_actions = array(
+		'showStream',
+		'serveFile'
+	);
+
 	public static $url_handlers = array(
-	    '$FileToken' => 'index'
+	    '$FileToken' => 'serveFile'
 	);
 
 	function Link() {
@@ -14,7 +19,8 @@ class ShareXController extends Controller {
 		return $random_actions[array_rand($random_actions)]."/";
 	}
 
-	function index(){ 
+	function serveFile(){
+
 		$params = $this->getURLParams();
 		$token = $params['FileToken'];
 
